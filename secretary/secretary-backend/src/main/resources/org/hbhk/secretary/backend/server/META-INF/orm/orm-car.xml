@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<orm xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://www.hbhk.org/orm/sql"
+	xsi:schemaLocation="http://www.hbhk.org/orm/sql orm.xsd">
+	<select id="CarInfo.findAllList">
+		<sql>
+			select * from t_sct_car 
+	       			 where status !=2
+		</sql>
+	</select>
+	<select id="CarInfo.findListByIds">
+		<sql>
+			select * from t_sct_car where 
+		       		id in (
+		       		#for (id : ids)
+		       			id,
+					#end
+		       		 -1)
+		</sql>
+	</select>
+	<select id="CarInfo.findListByQueryMap">
+		<sql>
+			select * from t_sct_car where 
+		       			status !=2
+					
+	       				#if(icon)
+	       					and icon = :icon
+	       				#end
+
+	       				#if(mainImgUrl)
+	       					and main_img_url = :mainImgUrl
+	       				#end
+
+	       				#if(name)
+	       					and name = :name
+	       				#end
+
+	       				#if(nameEN)
+	       					and name_en = :nameEN
+	       				#end
+
+	       				#if(phoneTic)
+	       					and phoneTic = :phoneTic
+	       				#end
+
+	       				#if(phoneTicShort)
+	       					and phoneTicShort = :phoneTicShort
+	       				#end
+
+	       				#if(phoneTicFirst)
+	       					and phoneTicFirst = :phoneTicFirst
+	       				#end
+
+	       				#if(description)
+	       					and description = :description
+	       				#end
+
+	       				#if(url)
+	       					and url = :url
+	       				#end
+
+	       				#if(website)
+	       					and website = :website
+	       				#end
+		</sql>
+	</select>
+	<select id="CarInfo.findListByQueryMapWithPage">
+		<sql>
+			select * from t_sct_car 
+	       			 where status !=2
+					
+	       				#if(icon)
+	       					and icon = :icon
+	       				#end
+
+	       				#if(mainImgUrl)
+	       					and main_img_url = :mainImgUrl
+	       				#end
+
+	       				#if(name)
+	       					and name = :name
+	       				#end
+
+	       				#if(nameEN)
+	       					and name_en = :nameEN
+	       				#end
+
+	       				#if(phoneTic)
+	       					and phoneTic = :phoneTic
+	       				#end
+
+	       				#if(phoneTicShort)
+	       					and phoneTicShort = :phoneTicShort
+	       				#end
+
+	       				#if(phoneTicFirst)
+	       					and phoneTicFirst = :phoneTicFirst
+	       				#end
+
+	       				#if(description)
+	       					and description = :description
+	       				#end
+
+	       				#if(url)
+	       					and url = :url
+	       				#end
+
+	       				#if(website)
+	       					and website = :website
+	       				#end
+		</sql>
+	</select>
+	
+	<update id="CarInfo.updateStatusByIds">
+			<sql>
+			update t_sct_car
+		       		set status=${status}
+		       		 where 
+		       		id in (
+		       		#for (id : ids)
+		       			id,
+					#end
+		       		 -1)
+			</sql>
+	</update>
+</orm>
+

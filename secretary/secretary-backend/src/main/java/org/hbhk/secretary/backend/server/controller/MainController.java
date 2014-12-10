@@ -13,8 +13,8 @@ import org.springframework.web.bind.annotation.RequestMapping;
 @RequestMapping("/backend")
 public class MainController extends BaseController {
 
-	@RequestMapping("/getRandcode")
-	public void getRandcode(HttpServletRequest request,
+	@RequestMapping("/getValidatecode")
+	public void getValidatecode(HttpServletRequest request,
 			HttpServletResponse response) {
 		RandomValidateCodeUtil.getRandcode(request, response,
 				SecretaryConstans.VALIDATECODEKEY);
@@ -23,6 +23,26 @@ public class MainController extends BaseController {
 	@RequestMapping("/index")
 	public String index(HttpServletRequest request, HttpServletResponse response) {
 		return "index";
-
 	}
+
+	@RequestMapping("/menu")
+	public String menu() {
+		return "menu";
+	}
+
+	@RequestMapping("/top")
+	public String top() {
+		return "top";
+	}
+
+	@RequestMapping("/loginpage")
+	public String loginpage() {
+		return "loginpage";
+	}
+
+	@RequestMapping("/welcome")
+	public String welcome() {
+		return "welcome";
+	}
+
 }

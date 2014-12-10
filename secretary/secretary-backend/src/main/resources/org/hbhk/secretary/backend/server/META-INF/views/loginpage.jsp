@@ -5,98 +5,74 @@
 <!DOCTYPE html>
 <html>
 <head>
-<meta http-equiv="content-type" content="text/html; charset=utf-8" />
-<title>${siteInfo.title}-用户登录</title>
-<style type="text/css">
-.lrborder {
-	border: 1px solid #999999;
-	margin-top: 30px;
-}
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>欢迎登录后台管理系统</title>
+<link href="${styles}/index/style.css" type="text/css" rel="stylesheet" />
+<script src="js/cloud.js" type="text/javascript"></script>
 
-.setting-font {
-	font-family: '宋体 Bold', '宋体';
-	font-weight: 700;
-	font-style: normal;
-	height: 40px;
-	line-height: 40px;
-	border-bottom: 2px solid #FF9900;
-}
+<script language="javascript">
+	$(function() {
+		$('.loginbox').css({
+			'position' : 'absolute',
+			'left' : ($(window).width() - 692) / 2
+		});
+		$(window).resize(function() {
+			$('.loginbox').css({
+				'position' : 'absolute',
+				'left' : ($(window).width() - 692) / 2
+			});
+		})
+	});
+</script>
 
-.setting-font1 {
-	font-family: '宋体 Bold', '宋体';
-	font-style: normal;
-	height: 60px;
-	line-height: 60px;
-}
-
-.setting-font1 input {
-	height: 30px;
-	float: left;
-	width: 30%;
-	margin-top: 5px;
-}
-</style>
-<script src="${scripts}/login/jquery.cookie.js"></script>
-<script src="${scripts}/login/data.js"></script>
 </head>
-<body>
-	<jsp:include page="header-nouser.jsp" />
-	<!-- 中间部分 -->
-	<div class="row-fluid" style="min-height: 500px">
-		<div class="span1" style="margin-left: 60px;"></div>
 
-		<div class="span2" style="margin-left: 0px;"></div>
-		<div class="span6" style="margin-left: 0px;">
-			<div class="lrborder" style="width: 100%; float: left;">
-				<div class="setting-font" style="">
-					<div
-						style="margin-left: 3px; background-color: #F2F2F2; width: 30%">欢迎登录</div>
-				</div>
-				<div class="setting-font1"
-					style="font-weight: 700; margin-top: 100px;">
-					<div style="height: 40px; width: 100%; margin-top: 5px;">
-						<div
-							style="width: 80px; float: left; height: 40px; line-height: 40px; margin-left: 25%;">用户名:</div>
-						<input type="text" class="email" title="请输入用户名" style="margin-right: 25%;">
-					</div>
-				</div>
+<body
+	style="background-color: #1c77ac; background-image: url(images/light.png); background-repeat: no-repeat; background-position: center top; overflow: hidden;">
 
-				<div class="setting-font1" style="font-weight: 700;">
-					<div style="height: 40px; width: 100%; margin-top: 5px;">
-						<div
-							style="width: 80px; float: left; height: 40px; line-height: 40px; margin-left: 25%;">密码:</div>
-						<input type="password" class="password" title="请输入密码" style="margin-right: 25%;">
-					</div>
-				</div>
-				<div class="" style="font-weight: 700;">
-					<div style="height: 40px; width: 100%; margin-top: 5px;">
-						<div class="checkbox"  style="float: left;margin-left: 35%;">
-							<label> <input type="checkbox" class="rememberme" > 记住密码
-							</label>
-						</div>
-						<div style="float: left;margin-left: 5%;text-decoration: underline;">
-							<a href="javascript:void(0)" class="forget-pwd">忘记密码?</a>
-						</div>
-					</div>
-				</div>
-				
-				<div class="" style="font-weight: 700;float: left;margin-left: 35%;">
-					<div  style="float: left;">
-						<input type="button" class="login" value="登录" style="background-image: url('/images/user/reg/u26.png');
-						border: 0;width:180px;height: 40px;font-size: 20px;color: #FFFFFF;"> 
-					</div>
-					<div style="margin-left: 20%;float: left;margin-bottom: 100px;text-decoration: underline;margin-top: 10px;">
-						<a href="${base}user/register.htm" >我要注册</a>
-					</div>
-				</div>
-				
-			</div>
+
+
+	<div id="mainBody">
+		<div id="cloud1" class="cloud"></div>
+		<div id="cloud2" class="cloud"></div>
+	</div>
+
+
+	<div class="logintop">
+		<span>欢迎登录后台管理界面平台</span>
+		<ul>
+			<li><a href="#">回首页</a></li>
+			<li><a href="#">帮助</a></li>
+			<li><a href="#">关于</a></li>
+		</ul>
+	</div>
+
+	<div class="loginbody">
+
+		 <span class="systemlogo"></span> 
+
+		<div class="loginbox" style="">
+
+			<ul>
+				<li><input name="" type="text" class="loginuser" value="admin"
+					 /></li>
+				<li><input name="" type="text" class="loginpwd" value="密码"
+					/></li>
+				<li><input name="" type="button" class="loginbtn" value="登录"
+					onclick="javascript:window.location='${base}backend/index.htm'" /><label><input
+						name="" type="checkbox" value="" checked="checked" />记住密码</label><label><a
+						href="#">忘记密码？</a></label></li>
+			</ul>
+
 		</div>
 
-		<div class="span2" style="margin-left: 0px;"></div>
-
-		<div class="span1"></div>
 	</div>
-	<jsp:include page="footer.jsp" />
+
+	<div class="loginbm">
+		版权所有 2013 HBHK
+	</div>
+
+
 </body>
+
 </html>
