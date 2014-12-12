@@ -57,7 +57,7 @@
 #mainFrame{
 width: 100%;
 height: 100%;
-min-height: 1000px;
+min-height: 600px;
 }
 </style>
 </head>
@@ -65,7 +65,7 @@ min-height: 1000px;
 	<div style="width: 100%; float: left;">
 		<jsp:include page="top.jsp" />
 	</div>
-	<div style="width: 17%; float: left;height: 100%;background: #f0f9fd;min-height: 1000px;border-right: 2px solid #B9CAD3;">
+	<div style="width: 17%; float: left;height: 100%;background: #f0f9fd;min-height: 600px;border-right: 2px solid #B9CAD3;">
 		<jsp:include page="menu.jsp" />
 	</div>
 	<div style="float: left;width:83%;">

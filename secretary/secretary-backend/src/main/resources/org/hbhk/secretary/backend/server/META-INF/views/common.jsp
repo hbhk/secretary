@@ -32,4 +32,8 @@
 <script src="${scripts}/common.js"></script>
 <link href="${styles}/backTop.css" type="text/css" rel="stylesheet" />
 <script src="${scripts}/backTop.js"></script>
+<link rel="stylesheet" href="${scripts}/jqgrid/ui.jqgrid.css" >
+<script src="${scripts}/jqgrid/i18n/grid.locale-cn.js" type="text/javascript"></script>
+<script src="${scripts}/jqgrid/jquery.jqGrid.min.js" type="text/javascript"></script>
 </head>
+</html>

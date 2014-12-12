@@ -15,7 +15,7 @@
 				<span><img src="${images}/leftico03.png" /></span>汽车管理
 			</div>
 			<ul class="menuson1">
-				<li><cite></cite><a href="#">汽车管理</a><i></i></li>
+				<li><cite></cite><a href="${base}car/carList.htm" target="mainFrame">汽车管理</a><i></i></li>
 				<li><cite></cite><a href="#">图片管理</a><i></i></li>
 			</ul>
 		</dd>
