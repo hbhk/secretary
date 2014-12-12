@@ -16,8 +16,8 @@ import org.springframework.web.bind.annotation.ResponseBody;
  * @author  何波
  */
 @Controller
-@RequestMapping("/car")
-public class CarController extends BaseController {
+@RequestMapping("/user")
+public class UserController extends BaseController {
 
 	@Autowired
 	private ICarService carService;
@@ -106,13 +106,6 @@ public class CarController extends BaseController {
 	@ResponseBody
 	public int updateStatusByIds(List<Long> ids,Integer state){
 		return carService.updateStatusByIds(ids,state);
-	}
-	
-	
-	@RequestMapping("carList")
-	public String carList(){
-		
-		return "carList";
 	}
 	
 	
