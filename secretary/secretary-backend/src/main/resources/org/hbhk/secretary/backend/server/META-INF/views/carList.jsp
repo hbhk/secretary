@@ -71,6 +71,9 @@
 .query-form .q-line-button input {
 	float: left;
 	border: 0;
+	background-image: url("${images}/buttonbg.png");
+	color: white;
+	font-family: '微软雅黑';
 }
 
 .query-form .q-line-button .query-btn {
@@ -90,28 +93,17 @@
 	<div class="query-form">
 		<div class="q-line">
 			<div class="q-line-input">
-				<label>汽车名称</label> <input type="text">
+				<label>名称</label> <input type="text">
 			</div>
 			<div class="q-line-input">
-				<label>汽名称</label> <input type="text">
+				<label>英文名称</label> <input type="text">
 
 			</div>
 			<div class="q-line-input">
-				<label>汽车称</label> <input type="text">
+				<label>官方网址</label> <input type="text">
 			</div>
 		</div>
-		<div class="q-line">
-			<div class="q-line-input">
-				<label>汽车名称</label> <input type="text">
-			</div>
-			<div class="q-line-input">
-				<label>汽称</label> <input type="text">
-
-			</div>
-			<div class="q-line-input">
-				<label>汽车称</label> <input type="text">
-			</div>
-		</div>
+		
 		<div class="q-line-button">
 			<input type="button" class="reset-btn" value="重置"> <input
 				type="button" class="query-btn" value="查询">

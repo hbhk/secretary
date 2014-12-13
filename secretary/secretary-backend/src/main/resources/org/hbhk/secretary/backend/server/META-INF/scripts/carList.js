@@ -7,13 +7,14 @@ $(document).ready(function() {
 		height: 'auto',
 		width:tblw,
         mtype: 'POST',  
-        colNames:['id','名称', '英文名称', '价格', '卖价','官方网址','描述','创建时间','修改时间','状态'],
+        colNames:['id','名称', '英文名称', '价格', '卖价','详情地址','官方网址','描述','创建时间','修改时间','状态'],
         colModel:[
                 {name:'id',editable: false, hidden:true,custom_value:myId},
                 {name:'name',index:'q_sl_name', width:60,editable: true,required:true },
                 {name:'nameEN',index:'q_sl_nameEN', width:90,editable: true ,required:true},
-                {name:'price',index:'q_sl_price', width:90,editable: true,required:true },
-                {name:'realPrice',index:'q_sl_realPrice', width:90,editable: true,required:true },
+                {name:'price',index:'q_int_price', width:90,editable: true,required:true },
+                {name:'realPrice',index:'q_int_realPrice', width:90,editable: true,required:true },
+                {name:'url',index:'q_sl_url', width:90,editable: true,required:true },
                 {name:'website',index:'q_sl_website', width:90,editable: true,required:true },
                 {name:'description',index:'q_sl_description', width:90,editable: true,required:true },
                 {name:'createTime',index:'createTime', width:125,formatter:customDateFmatter,search:false},
@@ -37,7 +38,7 @@ $(document).ready(function() {
         rowNum:10,
         rowList:[10,20,30],
         pager:"#gridPager",
-        caption: "用户列表"
+        caption: "汽车列表"
 	}).navGrid('#gridPager', {
 		add: true,
 		addtext:'新增',

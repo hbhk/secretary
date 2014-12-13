@@ -31,11 +31,11 @@
 	       				#end
 
 	       				#if(name)
-	       					and name = :name
+	       					and name like :name
 	       				#end
 
 	       				#if(nameEN)
-	       					and name_en = :nameEN
+	       					and name_en like :nameEN
 	       				#end
 
 	       				#if(phoneTic)
@@ -55,11 +55,11 @@
 	       				#end
 
 	       				#if(url)
-	       					and url = :url
+	       					and url like :url
 	       				#end
 
 	       				#if(website)
-	       					and website = :website
+	       					and website like :website
 	       				#end
 		</sql>
 	</select>
@@ -77,11 +77,11 @@
 	       				#end
 
 	       				#if(name)
-	       					and name = :name
+	       					and name like :name
 	       				#end
 
 	       				#if(nameEN)
-	       					and name_en = :nameEN
+	       					and name_en like :nameEN
 	       				#end
 
 	       				#if(phoneTic)
@@ -101,11 +101,11 @@
 	       				#end
 
 	       				#if(url)
-	       					and url = :url
+	       					and url like :url
 	       				#end
 
 	       				#if(website)
-	       					and website = :website
+	       					and website like :website
 	       				#end
 		</sql>
 	</select>
