@@ -1,6 +1,8 @@
 /**   */
 package org.hbhk.secretary.backend.shared.pojo;
 
+import java.math.BigDecimal;
+
 import org.hbhk.aili.orm.server.annotation.Column;
 import org.hbhk.aili.orm.server.annotation.Tabel;
 import org.hbhk.aili.orm.share.model.BaseInfo;
@@ -13,14 +15,6 @@ public class CarInfo extends BaseInfo {
 
 	private static final long serialVersionUID = 5211504527985935662L;
 
-	/** 品牌icon */
-	@Column("icon")
-	private String icon;
-
-	/** 品牌主图 */
-	@Column("main_img_url")
-	private String mainImgUrl;
-
 	/** 品牌中文名 */
 	@Column("name")
 	private String name;
@@ -28,6 +22,19 @@ public class CarInfo extends BaseInfo {
 	/** 品牌英文名 */
 	@Column("name_en")
 	private String nameEN;
+
+	@Column("price")
+	private BigDecimal price;
+
+	@Column("real_price")
+	private BigDecimal realPrice;
+	/** 品牌icon */
+	@Column("icon")
+	private String icon;
+
+	/** 品牌主图 */
+	@Column("main_img_url")
+	private String mainImgUrl;
 
 	/** 品牌中文名全拼 */
 	@Column("phoneTic")
@@ -131,6 +138,22 @@ public class CarInfo extends BaseInfo {
 
 	public void setWebsite(String website) {
 		this.website = website;
+	}
+
+	public BigDecimal getPrice() {
+		return price;
+	}
+
+	public void setPrice(BigDecimal price) {
+		this.price = price;
+	}
+
+	public BigDecimal getRealPrice() {
+		return realPrice;
+	}
+
+	public void setRealPrice(BigDecimal realPrice) {
+		this.realPrice = realPrice;
 	}
 
 }

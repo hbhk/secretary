@@ -2,17 +2,20 @@ $(document).ready(function() {
 	var tblw=$(".tab-page").width();
 	$("#tab-list").jqGrid({
         url:base+"car/findListPage.htm",
-        editurl:base+"user/editUser.htm",
+        editurl:base+"car/editCar.htm",
         datatype: "json",
 		height: 'auto',
 		width:tblw,
         mtype: 'POST',  
-        colNames:['id','用户名', '姓名', '认证邮箱', '创建日期','修改时间','状态'],
+        colNames:['id','名称', '英文名称', '价格', '卖价','官方网址','描述','创建时间','修改时间','状态'],
         colModel:[
-                {name:'id', hidden:true},
-                {name:'mail',index:'q_sl_mail', width:60,editable: true,required:true },
-                {name:'name',index:'q_sl_name', width:90,editable: true ,required:true},
-                {name:'remail',index:'q_sl_remail', width:90,editable: true,required:true },
+                {name:'id',editable: false, hidden:true,custom_value:myId},
+                {name:'name',index:'q_sl_name', width:60,editable: true,required:true },
+                {name:'nameEN',index:'q_sl_nameEN', width:90,editable: true ,required:true},
+                {name:'price',index:'q_sl_price', width:90,editable: true,required:true },
+                {name:'realPrice',index:'q_sl_realPrice', width:90,editable: true,required:true },
+                {name:'website',index:'q_sl_website', width:90,editable: true,required:true },
+                {name:'description',index:'q_sl_description', width:90,editable: true,required:true },
                 {name:'createTime',index:'createTime', width:125,formatter:customDateFmatter,search:false},
                 {name:'updateTime',index:'updateTime', width:100,formatter:customDateFmatter,search:false},                
                 {name:'status',index:'status', width:120,search:false,formatter: "select", editoptions:{value:"0:无效;1:有效;2:删除"}}       
@@ -48,3 +51,7 @@ $(document).ready(function() {
 		refreshtext:'刷新'
 		});
 });
+
+function myId(elem) {
+    return $(elem).val();
+  }
